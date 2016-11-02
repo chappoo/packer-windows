@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 
 Write-BoxstarterMessage "Clearing out windows update downloads..."
 Stop-Service -Name "wuauserv"
@@ -16,3 +17,7 @@ Write-BoxstarterMessage "Zeroing..."
 [System.Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem")
 [System.IO.Compression.ZipFile]::ExtractToDirectory("sdelete.zip", ".") 
 ./sdelete.exe /accepteula -z c:
+
+if(Test-PendingReboot){ Invoke-Reboot }
+
+Write-BoxstarterMessage "Compact complete"

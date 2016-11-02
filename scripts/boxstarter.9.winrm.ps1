@@ -30,4 +30,4 @@ Stop-Service -Name "winrm"
 Start-Process -FilePath "sc.exe" -ArgumentList "config winrm start= auto" -Wait
 Start-Service -Name "winrm"
 
-Write-BoxstarterMessage "winrm setup complete"
+Write-BoxstarterMessage "WinRM setup complete"

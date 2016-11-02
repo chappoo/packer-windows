@@ -10,3 +10,7 @@ if ($system -ne $null) {
   $System.AutomaticManagedPagefile = $true
   $System.Put()
 }
+
+if(Test-PendingReboot){ Invoke-Reboot }
+
+Write-BoxstarterMessage "Post-compact complete"
