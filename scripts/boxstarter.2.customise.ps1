@@ -30,10 +30,10 @@ choco install IIS-ManagementScriptingTools -source windowsfeatures
 choco install IIS-WindowsAuthentication -source windowsfeatures
 
 Write-BoxstarterMessage "Installing dev tools"
-choco install visualstudio2015community -y --ignore-checksums
+#choco install visualstudio2015community -y --ignore-checksums
 choco install visualstudiocode -y --ignore-checksums
 #choco install mssqlserver2014express -y --ignore-checksums
-choco install mssqlservermanagementstudio2014express -y --ignore-checksums
+#choco install mssqlservermanagementstudio2014express -y --ignore-checksums
 choco install webpi -y --ignore-checksums
 choco install resharper -y --ignore-checksums
 choco install fiddler4 -y --ignore-checksums
@@ -45,7 +45,7 @@ choco install gitkraken -y --ignore-checksums
 choco install putty -y --ignore-checksums
 choco install SublimeText3 -y --ignore-checksums
 choco install google-chrome-x64 -y --ignore-checksums
-choco install firefox -y --ignore-checksums
+#choco install firefox -y --ignore-checksums
 choco install dotpeek -y --ignore-checksums
 #choco install lastpass -y --ignore-checksums
 choco install NuGet.CommandLine -y --ignore-checksums

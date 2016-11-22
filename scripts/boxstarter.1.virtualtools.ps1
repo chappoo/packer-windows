@@ -8,7 +8,7 @@ Write-BoxstarterMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if (-not (Test-Path -Path "C:\Windows\Temp\windows.iso"))
 {
     Write-BoxstarterMessage "Downloading VMware Tools"
-    (New-Object System.Net.WebClient).DownloadFile("https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/8.5.1/4543325/packages/com.vmware.fusion.tools.windows.zip.tar", "C:\Windows\Temp\com.vmware.fusion.tools.windows.zip.tar")
+    (New-Object System.Net.WebClient).DownloadFile("https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/8.5.2/4635224/packages/com.vmware.fusion.tools.windows.zip.tar", "C:\Windows\Temp\com.vmware.fusion.tools.windows.zip.tar")
     Write-BoxstarterMessage "Extracting VMware Tools"
     &C:\ProgramData\Chocolatey\tools\7z.exe x "C:\Windows\Temp\com.vmware.fusion.tools.windows.zip.tar" -oC:\Windows\Temp\VMWare -aoa | Out-Host
     &C:\ProgramData\Chocolatey\tools\7z.exe x "C:\Windows\Temp\VMWare\com.vmware.fusion.tools.windows.zip" -oC:\Windows\Temp\VMWare -aoa | Out-Host
