@@ -30,7 +30,7 @@ choco install IIS-ManagementScriptingTools -source windowsfeatures
 choco install IIS-WindowsAuthentication -source windowsfeatures
 
 Write-BoxstarterMessage "Installing dev tools"
-#choco install visualstudio2015community -y --ignore-checksums
+choco install visualstudio2017community -y --ignore-checksums
 choco install visualstudiocode -y --ignore-checksums
 #choco install mssqlserver2014express -y --ignore-checksums
 #choco install mssqlservermanagementstudio2014express -y --ignore-checksums
@@ -54,6 +54,7 @@ choco install NuGet.CommandLine -y --ignore-checksums
 #choco install royalts -y --ignore-checksums
 #choco install dropbox -y --ignore-checksums
 choco install linqpad -y --ignore-checksums
+choco install windirstat -y --ignore-checksums
 
 if(Test-PendingReboot){ Invoke-Reboot }
 
